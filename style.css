@@ -1,7 +1,15 @@
 /* intuitivnější box-sizing pro všechny prvky na stránce */
-html { box-sizing: border-box; }
-*, ::before, ::after { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
 
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
 
 /*
 	Poznámky:
@@ -28,8 +36,195 @@ html { box-sizing: border-box; }
 	#303339		tmavé pozadí patičky
 */
 
-
 body {
-	margin: 0;
+  margin: 0;
+  font-family: 'Lora', serif;
+  color: #242424;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #3e606b;
+}
+
+h3 {
+  font-size: 18px;
+  color: #3e606b;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.paragraph1 {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  border-radius: 5px;
+}
+
+/* .container {
+  padding: 30px 0;
+} */
+
+.container-small {
+  max-width: 1100px;
+  margin: 0 auto 0 auto;
+  padding: 80px 0;
+}
+
+.container-small.navigation {
+  max-width: 1100px;
+  margin: 0 auto 0 auto;
+  padding: 30px 0;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 170px;
+}
+
+.header__menu {
+  display: flex;
+}
+
+.header__menu a {
+  padding: 10px 15px;
+}
+
+.header__menu a {
+  color: #242424;
+}
+
+.header__menu a:hover {
+  background-color: #f195b2;
+  border-radius: 30px;
+  color: #fff;
+}
+
+/* HERO SECTION */
+
+.hero {
+  background-image: url('./images/cupcake.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.hero__title {
+  margin-bottom: 30px;
+}
+
+.hero__motto {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.hero__title-motto {
+  padding-right: 40%;
+}
+
+/* WELCOME SECTION */
+
+.welcome__group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.welcome__button {
+  display: inline-block;
+  color: #fff;
+  background-color: #f195b2;
+  border-radius: 30px;
+  padding: 15px 40px;
+  margin-top: 30px;
+}
+
+.welcome__button:hover {
+  background-color: #d2567d;
+}
+
+/* DAY OFFER SECTION */
+
+#day-offer {
+  background-color: #f0f0f0;
+}
+
+.day-offer__intro {
+  margin-bottom: 15px;
+}
+
+.day-offer__cards {
+  display: flex;
+  gap: 30px;
+}
+
+.day-offer__card {
+  width: 25%;
+  box-shadow: 6px 7px 16px 2px rgba(150, 150, 150, 1);
+  border-radius: 5px;
+}
+
+.day-offer__card img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.day-offer__card-description {
+  text-align: center;
+  padding: 20px;
+}
+
+.day-offer__card-description h3 {
+  margin-bottom: 15px;
+}
+
+/* BAKING APPROACH SECTION */
+
+.baking-approach__group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 30px;
+  background-color: #303339;
+  text-align: center;
+  color: #fff;
+}
